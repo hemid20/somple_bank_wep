@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Bank</title>
+<style>
+body{font-family:Arial;background:#f2f2f2;padding:20px;}
+.card{background:#fff;padding:15px;margin:10px;border-radius:10px;}
+input,button{padding:8px;margin:5px;width:100%;}
+</style>
+</head>
+<body>
+
+<h2>Simple Bank Dashboard</h2>
+
+<div class="card">
+<h3>Create Account</h3>
+<input id="c1" placeholder="Account Number">
+<input id="c2" placeholder="Name">
+<input id="c3" placeholder="National ID">
+<input id="c4" placeholder="Initial Balance">
+<input id="c5" placeholder="Type (Saving/Current)">
+<button onclick="createAcc()">Create</button>
+<div id="msg1"></div>
+</div>
+
+<div class="card">
+<h3>Login</h3>
+<input id="l1" placeholder="Account Number">
+<button onclick="login()">Login</button>
+<div id="msg2"></div>
+</div>
+
+<div class="card" id="dash" style="display:none">
+<h3 id="dname"></h3>
+<p>Balance: <span id="dbal"></span></p>
+
+<input id="amt" placeholder="Amount">
+<button onclick="deposit()">Deposit</button>
+<button onclick="withdraw()">Withdraw</button>
+
+<h4>Transfer</h4>
+<input id="tacc" placeholder="To Account">
+<input id="tamt" placeholder="Amount">
+<button onclick="transfer()">Transfer</button>
+
+<button onclick="logout()">Logout</button>
+
+<div id="msg3"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
